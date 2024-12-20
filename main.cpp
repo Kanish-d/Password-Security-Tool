@@ -37,7 +37,7 @@ bool isCommonPassword(const std::string& password, const std::string& filePath) 
 
 void evaluatePassword(const std::string& password, const std::string& commonPasswordFile) {
     double entropy = calculateEntropy(password);
-    std::cout << "Password Entropy: " << entropy << " bits\n";
+    std::cout << "\nPassword Entropy: " << entropy << " bits\n";
 
     if (isCommonPassword(password, commonPasswordFile)) {
         std::cout << RED << "Warning: Your password is commonly used and weak!\n" << RESET;
@@ -53,7 +53,7 @@ void evaluatePassword(const std::string& password, const std::string& commonPass
     } else {
         std::cout << GREEN << "Password Strength: Strong\n" << RESET;
     }
-    std::cout << "------------------------------------\n";
+    std::cout << "-------------------------------------------------------\n\n";
 }
 
 int main() {
